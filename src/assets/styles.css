@@ -6,16 +6,29 @@ body {
   color: #333;
 }
 
-/* Encabezado principal con imagen */
 header {
   background-image: url("banner-header-paper-crumpled.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #dbd3d3;
-  padding: 2rem;
-  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;               /* distribuye elementos en fila */
+  justify-content: space-between; /* izquierda, centro, derecha */
+  align-items: center;         /* centra verticalmente */
   position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  flex: 1;                     /* ocupa espacio central */
+}
+
+header img {
+  height: 40px;                /* tamaño de los íconos */
+  width: auto;
 }
 
 /* Overlay para mejorar contraste del texto */
@@ -30,10 +43,6 @@ header h1, header nav {
   position: relative; /* asegura que el texto quede encima del overlay */
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
 
 /* Navegación */
 nav ul {
