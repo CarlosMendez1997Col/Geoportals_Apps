@@ -6,13 +6,31 @@ body {
   color: #333;
 }
 
-/* Encabezado principal */
+
+/* Encabezado principal con imagen */
 header {
-  background-color: #2a7a7b; /* tono verde-azulado */
-  color: #fff;
-  padding: 1rem;
+  background-image: url("banner-header-paper-crumpled.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #dbd3d3;
+  padding: 2rem;
   text-align: center;
+  position: relative;
 }
+
+/* Overlay para mejorar contraste del texto */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* capa oscura semitransparente */
+}
+
+header h1, header nav {
+  position: relative; /* asegura que el texto quede encima del overlay */
+}
+
 
 header h1 {
   margin: 0;
