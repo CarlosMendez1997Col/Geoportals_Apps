@@ -21,6 +21,22 @@
   <link rel="stylesheet" href="../src/assets/styles.css">
 </head> 
 <body>
+    <!-- Franja superior institucional -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <img src="logo-inst1.png" alt="Institución 1" class="topbar-logo">
+      <img src="logo-inst2.png" alt="Institución 2" class="topbar-logo">
+      <!-- puedes añadir más logotipos -->
+    </div>
+    <div class="topbar-right">
+      <form class="topbar-search">
+        <input type="text" placeholder="Buscar..." class="topbar-input">
+        <button type="submit" class="topbar-button">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+  </div>
   <!-- Encabezado principal -->  
   <header class="header-video">
   <video autoplay muted loop playsinline class="header-video-bg">
@@ -52,7 +68,7 @@
     <div class="row">
       <!-- Barra lateral fija con collapse -->
       <aside class="col-md-2 sidebar p-3 vh-150">
-        <button class="btn btn-secondary w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-expanded="true" aria-controls="sidebarCollapse">
+        <button class="btn btn-success w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-expanded="true" aria-controls="sidebarCollapse">
           ☰ Navegación
         </button>
         <div class="collapse show" id="sidebarCollapse">

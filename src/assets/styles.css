@@ -89,16 +89,16 @@ body {
 
 /* Capítulos estilo tarjeta en la barra lateral */
 .chapter-card {
-  border: 1px solid #2e5c44;
+  border: 1px solid #dae2de;
   border-radius: 6px;
-  background-color: #2c3e50;   /* azul profundo */
+  background-color: #198754;   /* azul profundo */
   margin-bottom: 0.75rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .chapter-card .nav-link {
   font-weight: bold;
-  color: #fff;
+  color: #fcfcfc;
   display: flex;
   align-items: center;
   gap: 0.5rem; /* espacio entre icono y texto */
@@ -109,7 +109,7 @@ body {
 }
 
 .chapter-card:hover {
-  background-color: #3b4a5a;   /* azul medio */
+  background-color: #1fb89680;   /* azul medio */
   transform: scale(1.02);      /* efecto ligero al pasar el mouse */
 }
 
@@ -143,7 +143,7 @@ body {
 
 .chapter-content h2 {
   margin-top: 0;
-  color: #2c3e50;
+  color: #080808;
 }
 
 .chapter-content p, 
@@ -164,4 +164,58 @@ body {
 .content h2 {
   margin-top: 0;
   color: #2c3e50;
+}
+
+/* Franja superior institucional */
+.topbar {
+  background-color: #0d3d2a; /* verde oscuro */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  height: 40px; /* altura pequeña */
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topbar-logo {
+  height: 28px; /* tamaño pequeño para caber en la franja */
+  width: auto;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-input {
+  height: 26px;
+  padding: 0 0.5rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.topbar-button {
+  height: 26px;
+  border: none;
+  background-color: #2e5c44; /* verde medio */
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.topbar-button:hover {
+  background-color: #3b7a5a;
 }
