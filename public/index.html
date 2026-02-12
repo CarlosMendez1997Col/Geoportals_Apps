@@ -4,40 +4,186 @@
 <!--*****************************************************************************************************************************************************-->
 
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="es"> 
 <head>
-    <meta charset="UTF-8">
-    <title>Geoportal </title> <!-- Title of the webpage -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ensures the webpage is responsive and scales properly on different devices--> 
-      <!-- Link to the external CSS file for styling the webpage -->
-      <link rel="stylesheet" href="../src/assets/styles.css">
-      <!-- Link to the Leaflet CSS file for styling the map -->
-      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <meta charset="UTF-8">
+  <title>Geoportal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="../src/assets/styles.css">
 </head> 
 <body>
-  <!-- Encabezado principal -->
-  <header>
-    <h1>Geoportal Institucional Stockholm Environment Institute (SEI)</h1>
-    <nav>
+  <!-- Encabezado principal -->  
+  <header class="header-video">
+  <video autoplay muted loop playsinline class="header-video-bg">
+    <source src="video_wallpaper.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
+  <div class="header-video-overlay">
+    <div class="header-top">
+      <img src="logo-left.png" alt="Logo Izquierdo" class="logo">
+      <h1>Geoportal Stockholm Environment Institute (SEI)</h1>
+      <img src="logo-right.png" alt="Logo Derecho" class="logo">
+    </div>
+
+    <nav class="header-nav">
       <ul>
-        <!-- Menú de navegación hacia otras páginas/secciones -->
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html">Introducción</a></li>
         <li><a href="desarrollo.html">Desarrollo/versiones</a></li>
         <li><a href="geovisor.html">Geovisor</a></li>
-        <li><a href="manual.html">Manual y guia de usuario</a></li>
+        <li><a href="manual.html">Manual y guía de usuario</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-  </header>
-
-  <header>
-    <div class="header-left">
-      <img src="logo-left.png" alt="Logo Izquierdo">
-    </div>
-    <div class="header-right">
-      <img src="logo-right.png" alt="Logo Derecho">
-    </div>
+  </div>
 </header>
 
+  <div class="container-fluid">
+    <h1 class="text-center mt-4"></h1>
+    <h3 class="text-center">Bienvenido al Geoportal del Stockholm Environment Institute (SEI)</h3>
+    <div class="row">
+      <!-- Barra lateral fija con collapse -->
+      <aside class="col-md-2 sidebar p-3 vh-150">
+        <button class="btn btn-secondary w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-expanded="true" aria-controls="sidebarCollapse">
+          ☰ Navegación
+        </button>
+        <div class="collapse show" id="sidebarCollapse">
+          <ul class="nav flex-column">
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#introduccion"><i class="bi bi-globe-americas"></i> Introducción</a>
+            </li>
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#objetivos"><i class="bi bi-bullseye"></i> Objetivos</a>
+            </li>
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#datos"><i class="bi bi-droplet"></i> Datos e información</a>
+            </li>
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#versiones"><i class="bi bi-journal-richtext"></i> Versiones y lanzamientos</a>
+            </li>
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#autores"><i class="bi bi-people-fill"></i> Autores</a>
+            </li>
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#licencias"><i class="bi bi-shield-check"></i> Licencias</a>
+            </li>
+            <li class="nav-item chapter-card">
+              <a class="nav-link" href="#copyright"><i class="bi bi-c-circle"></i> Copyright</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Contenido principal con bloques visuales -->
+      <main class="col-lg-10 p-4 content">
+
+        <section id="introduccion" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-globe-americas"></i></div>
+          <div class="chapter-content">
+            <h2>Introducción</h2>
+            <p>
+              El Geoportal Institucional es una plataforma diseñada para integrar, visualizar y compartir información geoespacial relevante para la gestión ambiental, climática e hidrológica. 
+              Su propósito es facilitar el acceso a datos confiables y actualizados, promoviendo la transparencia y el uso responsable de la información territorial.
+            </p>
+          </div>
+        </section>
+
+        <section id="objetivos" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-bullseye"></i></div>
+          <div class="chapter-content">
+            <h2>Objetivos</h2>
+            <ul>
+              <li>Centralizar y organizar datos geoespaciales de interés institucional.</li>
+              <li>Facilitar la exploración interactiva de mapas y capas temáticas.</li>
+              <li>Apoyar la toma de decisiones en proyectos de sostenibilidad y resiliencia.</li>
+              <li>Promover la colaboración entre instituciones, investigadores y ciudadanía.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="datos" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-droplet"></i></div>
+          <div class="chapter-content">
+            <h2>Datos e información</h2>
+            <p>
+              El geoportal integra diversas fuentes de datos, incluyendo imágenes satelitales, información hidrológica, climática y socioambiental. 
+              Cada conjunto de datos está acompañado de metadatos que garantizan su trazabilidad y confiabilidad. 
+            </p>
+            <ul>
+              <li>Unidades hidrográficas y cuencas.</li>
+              <li>Regiones climáticas y ecosistemas.</li>
+              <li>Indicadores de calidad ambiental.</li>
+              <li>Series temporales de precipitación y caudales.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="versiones" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-journal-richtext"></i></div>
+          <div class="chapter-content">
+            <h2>Versiones y lanzamientos</h2>
+            <p>
+              El desarrollo del geoportal se realiza de manera iterativa, incorporando mejoras en cada versión. 
+            </p>
+            <ul>
+              <li><strong>Versión 1.0:</strong> Diseño inicial del geoportal y carga de capas básicas.</li>
+              <li><strong>Versión 2.0:</strong> Integración de visor interactivo con Leaflet y selector de capas.</li>
+              <li><strong>Versión 3.0:</strong> Incorporación de filtros avanzados y exportación de datos.</li>
+              <li><strong>Versión 4.0:</strong> Personalización institucional con paleta ambiental y navegación modular.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="autores" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-people-fill"></i></div>
+          <div class="chapter-content">
+            <h2>Autores</h2>
+            <p>
+              El geoportal ha sido desarrollado por un equipo interdisciplinario de especialistas en geociencias, ingeniería ambiental y desarrollo web. 
+            </p>
+            <ul>
+              <li>Carlos Méndez – Arquitectura geoespacial y diseño frontend.</li>
+              <li>Equipo de investigación en hidrología y clima.</li>
+              <li>Instituciones académicas y socios estratégicos.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="licencias" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-shield-check"></i></div>
+          <div class="chapter-content">
+            <h2>Licencias</h2>
+            <p>
+              El contenido del geoportal se distribuye bajo licencias abiertas que permiten su uso, reproducción y adaptación, siempre que se cite la fuente. 
+              Las capas de datos están sujetas a las condiciones de cada proveedor, garantizando el respeto a los derechos de autor y la propiedad intelectual.
+            </p>
+          </div>
+        </section>
+
+        <section id="copyright" class="chapter-block">
+          <div class="chapter-icon"><i class="bi bi-c-circle"></i></div>
+          <div class="chapter-content">
+            <h2>Copyright</h2>
+            <p>
+              © 2026 Geoportal Institucional. Todos los derechos reservados. 
+              El uso de esta plataforma implica la aceptación de las políticas de acceso y distribución de datos establecidas por la institución.
+            </p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
